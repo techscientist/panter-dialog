@@ -16,6 +16,13 @@ android:
 before_install:
   - chmod +x gradlew
 
+env:
+  global:
+    - ADB_INSTALL_TIMEOUT=8
+
+script:
+  - ./gradlew assembleRelease
+
 licenses:
   - 'android-sdk-preview-license-.+'
   - 'android-sdk-license-.+'
